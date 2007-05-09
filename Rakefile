@@ -12,8 +12,8 @@ include FileUtils
 require File.join(File.dirname(__FILE__), 'lib', 'palmtree', 'version')
 
 AUTHOR = 'ggarside'  # can also be an array of Authors
-EMAIL = "your contact email for bug fixes and info"
-DESCRIPTION = "description of gem"
+EMAIL = "ruby@geoffgarside.co.uk"
+DESCRIPTION = "Set of recipes for Capistrano 2.0"
 GEM_NAME = 'palmtree' # what ppl will type to install your gem
 RUBYFORGE_PROJECT = 'palmtree' # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"

@@ -41,4 +41,7 @@ Capistrano::Configuration.instance(true).load do
       run "cp #{shared_path}/config/backgroundrb.yml #{release_path}/config/"
     end
   end
+  
+  # Install after hooks
+  after "deploy:update_code", "backgroundrb:copy_config"
 end

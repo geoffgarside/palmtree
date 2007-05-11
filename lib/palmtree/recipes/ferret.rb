@@ -66,4 +66,7 @@ Capistrano::Configuration.instance(true).load do
       end
     end
   end
+  
+  # Install after hooks
+  after "deploy:update_code", "ferret:server:copy_config", "ferret:index:symlink"
 end

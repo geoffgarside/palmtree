@@ -1,2 +1,2 @@
 require 'palmtree/capistrano_extensions/configuration_extensions'
-require 'palmtree/recipes/tail_log'
+require 'palmtree/recipes/tail'

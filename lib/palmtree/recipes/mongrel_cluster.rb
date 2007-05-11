@@ -76,20 +76,18 @@ Capistrano::Configuration.instance(true).load do
       mongrel.cluster.restart
     end
     
-    namespace :app do
-      desc <<-DESC
-        Start the application servers. Calls mongrel:cluster:start.
-      DESC
-      task :start, :roles => :app do
-        mongrel.cluster.start
-      end
-      
-      desc <<-DESC
-        Stop the application servers. Calls mongrel:cluster:stop.
-      DESC
-      task :stop, :roles => :app do
-        mongrel.cluster.stop
-      end
+    desc <<-DESC
+      Start the application servers. Calls mongrel:cluster:start.
+    DESC
+    task :start, :roles => :app do
+      mongrel.cluster.start
+    end
+    
+    desc <<-DESC
+      Stop the application servers. Calls mongrel:cluster:stop.
+    DESC
+    task :stop, :roles => :app do
+      mongrel.cluster.stop
     end
   end
 end

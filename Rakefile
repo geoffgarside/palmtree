@@ -12,8 +12,8 @@ include FileUtils
 require File.join(File.dirname(__FILE__), 'lib', 'palmtree', 'version')
 
 AUTHOR = 'ggarside'  # can also be an array of Authors
-EMAIL = "ruby@geoffgarside.co.uk"
-DESCRIPTION = "Set of recipes for Capistrano 2.0"
+EMAIL = "palmtree@geoffgarside.co.uk"
+DESCRIPTION = "Collection of Capistrano recipes"
 GEM_NAME = 'palmtree' # what ppl will type to install your gem
 RUBYFORGE_PROJECT = 'palmtree' # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
@@ -51,6 +51,8 @@ hoe = Hoe.new(GEM_NAME, VERS) do |p|
   p.changes = p.paragraphs_of("History.txt", 0..1).join("\n\n")
   #p.extra_deps = []     # An array of rubygem dependencies [name, version], e.g. [ ['active_support', '>= 1.3.1'] ]
   #p.spec_extras = {}    # A hash of extra values to set in the gemspec.
+  
+  p.extra_deps = ['capistrano', '>=1.99.1']
 end
 
 

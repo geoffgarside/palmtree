@@ -1,4 +1,20 @@
-+++ 0.0.1 2007-05-06
++++ 0.0.5 2007-05-14
++ 1 enhancement:
+  + Add recipes for basic management of a memcached server
 
++++ 0.0.4 2007-05-12
++ 1 enhancement:
+  + Use new PR2 after hooks for ferret and backgroundrb recipes
+
++++ 0.0.3 2007-05-12
++ 1 enhancement:
+  + Update recipes for Capistrano 2.0 PR2
+
++++ 0.0.2 2007-05-06
++ 1 bug fix:
+  + Fix reference to tail recipes in recipes.rb
+
++++ 0.0.1 2007-05-06
 + 1 major enhancement:
   + Initial release
+  + Include ported recipes from personal spongy gem

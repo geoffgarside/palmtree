@@ -7,6 +7,7 @@ lib/palmtree/capistrano_extensions/configuration_extensions.rb
 lib/palmtree/recipes.rb
 lib/palmtree/recipes/backgroundrb.rb
 lib/palmtree/recipes/ferret.rb
+lib/palmtree/recipes/memcached.rb
 lib/palmtree/recipes/mongrel_cluster.rb
 lib/palmtree/recipes/tail.rb
 lib/palmtree/version.rb

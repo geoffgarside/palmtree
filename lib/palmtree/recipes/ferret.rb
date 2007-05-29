@@ -32,7 +32,9 @@ Capistrano::Configuration.instance(true).load do
     namespace :server do
       desc "Configure ferret server"
       task :configure, :role => :app do
-        config = {rails_env => {'port' => ferret_port, 'host' => ferret_host, 'pid_file' => "log/ferret-#{rails_env}.pid"}}
+        config = {rails_env => {'port' => ferret_port, 
+                                'host' => ferret_host, 
+                                'pid_file' => "#{current_path}/log/ferret-#{rails_env}.pid"}}
         ferret_server_yml = config.to_yaml
     
         run "if [ ! -d #{shared_path}/config ]; then mkdir #{shared_path}/config; fi"
@@ -50,12 +52,12 @@ Capistrano::Configuration.instance(true).load do
   
       desc "Start ferret server"
       task :start, :role => :app do
-        run "RAILS_ENV=#{rails_env} #{current_path}/script/runner \"load '#{current_path}/script/ferret_start'\""
+        run "RAILS_ENV=#{rails_env} #{current_path}/script/runner #{current_path}/script/ferret_start"
       end
 
       desc "Stop ferret server"
       task :stop, :role => :app do
-        run "RAILS_ENV=#{rails_env} #{current_path}/script/runner \"load '#{current_path}/script/ferret_stop'\""
+        run "RAILS_ENV=#{rails_env} #{current_path}/script/runner #{current_path}/script/ferret_stop"
       end
   
       desc "Restart ferret server"

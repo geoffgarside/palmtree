@@ -1,0 +1,1 @@
+require 'palmtree/caching/memcached'

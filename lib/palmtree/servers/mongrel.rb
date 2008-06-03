@@ -9,6 +9,19 @@ Capistrano::Configuration.instance(true).load do
   set :mongrel_prefix, nil
   
   namespace :mongrel do
+    # Non cluster tasks
+    task :start, :roles => :app do
+      
+    end
+    
+    task :stop, :roles => :app do
+      
+    end
+    
+    task :restart, :roles => :app do
+      
+    end
+    
     namespace :cluster do
       desc <<-DESC
       Configure Mongrel processes on the app server. This uses the :use_sudo
